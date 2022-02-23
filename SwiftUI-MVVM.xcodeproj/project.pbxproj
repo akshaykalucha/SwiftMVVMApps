@@ -385,7 +385,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-MVVM/Preview Content\"";
-				DEVELOPMENT_TEAM = H69U55MWXW;
+				DEVELOPMENT_TEAM = FN4Y62X46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-MVVM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -393,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.seanallen.SwiftUI-MVVM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akcosh-AKshayKalucha.Dicee-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -407,7 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-MVVM/Preview Content\"";
-				DEVELOPMENT_TEAM = H69U55MWXW;
+				DEVELOPMENT_TEAM = FN4Y62X46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-MVVM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -415,7 +415,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "co.seanallen.SwiftUI-MVVM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.akcosh-AKshayKalucha.Dicee-iOS13";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

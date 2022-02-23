@@ -6,11 +6,45 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
 
 
 let apiKey = "a25ffc3abde70c25f3d7f331151a9e3f"
 
+extension CLLocationManager {
+    
+    func checkLocationPermission() {
+        
+        if self.authorizationStatus != .authorizedWhenInUse && self.authorizationStatus != .authorizedAlways {
+            
+            self.requestAlwaysAuthorization()
+            
+        }
+        
+    }
+    
+}
+
+var locationManager = CLLocationManager()
+
+
+class LocationManager: NSObject {
+    private let locationManager = CLLocationManager()
+    var location: CLLocation? = nil
+    override init() {
+        super.init()
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.distanceFilter = kCLDistanceFilterNone
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+    }
+    
+}
+
 class WeatherViewModel: ObservableObject {
+    private var longitude: String = ""
+    private var latitude: String = ""
     @Published var title: String = ""
     @Published var descriptionText: String = ""
     @Published var temp: String = ""
@@ -19,11 +53,18 @@ class WeatherViewModel: ObservableObject {
     
     init() {
         fetchWeather()
+        var currentLoc: CLLocation!
+        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+        CLLocationManager.authorizationStatus() == .authorizedAlways) {
+           currentLoc = locationManager.location
+            self.longitude =  String(currentLoc.coordinate.latitude)
+            self.latitude = String(currentLoc.coordinate.longitude)
+        }
     }
     
     func fetchWeather() {
         isLoading = true
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=40.721&&lon=-74&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=\(self.latitude)&&lon=\(self.longitude)&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
             return
         }
         let task = URLSession.shared.dataTask(with:url) { data, _, error in
