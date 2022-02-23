@@ -9,6 +9,52 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+
+class LocationManager: NSObject, ObservableObject {
+    private let manager = CLLocationManager()
+    @Published var userLocation: CLLocation?
+    
+    static let shared = LocationManager()
+    
+    override init(){
+        super.init()
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.startUpdatingLocation()
+    }
+    
+    func requestLocation() {
+        manager.requestWhenInUseAuthorization()
+    }
+}
+
+extension LocationManager: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            print("DEBUG")
+        case .restricted:
+            print("Debuf")
+            
+        case .denied:
+            print("FVHG")
+        case .authorizedAlways:
+            print("hgjk")
+        case .authorizedWhenInUse:
+            print("GHJB")
+        @unknown default:
+            break
+        }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        self.userLocation = location
+    }
+}
+
 class LocationHelper: NSObject, ObservableObject {
 
     static let shared = LocationHelper()

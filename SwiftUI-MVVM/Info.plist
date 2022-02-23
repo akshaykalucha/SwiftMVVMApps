@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>We'll only use your location when you ask to include it in a message</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow us to access your location</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
