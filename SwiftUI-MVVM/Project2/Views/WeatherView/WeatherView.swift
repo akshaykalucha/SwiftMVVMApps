@@ -14,6 +14,7 @@ struct WeatherView: View {
     var body: some View {
         NavigationView{
             VStack{
+                if viewModel.isLoading { LoadingView() }
                 Text(viewModel.timezone)
                     .font(.system(size: 32))
                 Text(viewModel.temp)
@@ -31,6 +32,6 @@ struct WeatherView: View {
 struct WeatherView_Previews: PreviewProvider {
     static var previews: some View {
         WeatherView()
-            .preferredColorScheme(.dark)
+        
     }
 }
