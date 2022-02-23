@@ -9,62 +9,71 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+class LocationHelper: NSObject, ObservableObject {
+
+    static let shared = LocationHelper()
+    static let DefaultLocation = CLLocationCoordinate2D(latitude: 45.8827419, longitude: -1.1932383)
+
+    static var currentLocation: CLLocationCoordinate2D {
+        guard let location = shared.locationManager.location else {
+            return DefaultLocation
+        }
+        return location.coordinate
+    }
+
+    private let locationManager = CLLocationManager()
+
+    private override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+}
+
+extension LocationHelper: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) { }
+
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Location manager failed with error: \(error.localizedDescription)")
+    }
+
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        print("Location manager changed the status: \(status)")
+    }
+}
+
+
 
 let apiKey = "a25ffc3abde70c25f3d7f331151a9e3f"
 
-extension CLLocationManager {
-    
-    func checkLocationPermission() {
-        
-        if self.authorizationStatus != .authorizedWhenInUse && self.authorizationStatus != .authorizedAlways {
-            
-            self.requestAlwaysAuthorization()
-            
-        }
-        
-    }
-    
-}
-
-var locationManager = CLLocationManager()
-
-
-class LocationManager: NSObject {
-    private let locationManager = CLLocationManager()
-    var location: CLLocation? = nil
-    override init() {
-        super.init()
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = kCLDistanceFilterNone
-        self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
-    }
-    
-}
-
 class WeatherViewModel: ObservableObject {
-    private var longitude: String = ""
-    private var latitude: String = ""
     @Published var title: String = ""
     @Published var descriptionText: String = ""
     @Published var temp: String = ""
     @Published var timezone: String = ""
     @Published var isLoading: Bool = false
     
+    private var region: MKCoordinateRegion = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: MapDefaults.latitude, longitude: MapDefaults.longitude),
+            span: MKCoordinateSpan(latitudeDelta: MapDefaults.zoom, longitudeDelta: MapDefaults.zoom))
+    private enum MapDefaults {
+        static let latitude = 45.872
+        static let longitude = -1.248
+        static let zoom = 0.5
+    }
+    
+    
     init() {
         fetchWeather()
-        var currentLoc: CLLocation!
-        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
-        CLLocationManager.authorizationStatus() == .authorizedAlways) {
-           currentLoc = locationManager.location
-            self.longitude =  String(currentLoc.coordinate.latitude)
-            self.latitude = String(currentLoc.coordinate.longitude)
-        }
+        let location = LocationHelper.currentLocation
+        print(location.longitude, "thiodb os jeqbdkja fdehbfjhew")
     }
     
     func fetchWeather() {
         isLoading = true
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=\(self.latitude)&&lon=\(self.longitude)&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=\(region.center.latitude)&&lon=\(region.center.longitude)&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
             return
         }
         let task = URLSession.shared.dataTask(with:url) { data, _, error in
