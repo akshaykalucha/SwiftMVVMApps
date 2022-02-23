@@ -113,13 +113,13 @@ class WeatherViewModel: ObservableObject {
     
     init() {
         fetchWeather()
-        let location = LocationHelper.currentLocation
-        print(location.longitude, "thiodb os jeqbdkja fdehbfjhew")
     }
     
     func fetchWeather() {
         isLoading = true
-        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=\(region.center.latitude)&&lon=\(region.center.longitude)&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
+        let location = LocationManager.shared.userLocation?.coordinate
+        print("\(location?.latitude) \(location?.longitude) this is the initial print of view")
+        guard let url = URL(string:"https://api.openweathermap.org/data/2.5/onecall?exclude=hourly,daily,minutely&lat=\(location?.latitude ?? 28.7041)&&lon=\(location?.longitude ?? 77.1025)&units=imperial&appid=a25ffc3abde70c25f3d7f331151a9e3f") else {
             return
         }
         let task = URLSession.shared.dataTask(with:url) { data, _, error in

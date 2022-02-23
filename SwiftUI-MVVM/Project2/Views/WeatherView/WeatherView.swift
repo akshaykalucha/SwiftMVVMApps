@@ -16,7 +16,7 @@ struct WeatherView: View {
             VStack{
                 if locationManager.userLocation == nil {
                     LocationRequestView()
-                }else{
+                }else if let location = locationManager.userLocation{
                     if viewModel.isLoading { LoadingView() }
                     Text(viewModel.timezone)
                         .font(.system(size: 32))
@@ -26,6 +26,10 @@ struct WeatherView: View {
                         .font(.system(size: 24))
                     Text(viewModel.descriptionText)
                         .font(.system(size: 24))
+                    Text("\(location)")
+//                    Button("print loc") {
+//                        print("\(location.coordinate.latitude)")
+//                    }
                 }
                 
             }
