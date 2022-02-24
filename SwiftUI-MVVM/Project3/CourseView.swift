@@ -9,6 +9,7 @@ import SwiftUI
 
 enum Route {
     case animal(String)
+    case secondview
 }
 
 struct Navigator {
@@ -17,6 +18,10 @@ struct Navigator {
         switch route {
         case .animal(let animal):
             return AnyView(NavigationLink(destination: AnimalView(animal: animal)) {
+                content()
+            })
+        case .secondview:
+            return AnyView(NavigationLink(destination: SecondView()) {
                 content()
             })
         }
@@ -36,6 +41,13 @@ struct CourseView: View {
                         Text(animal)
                     }
                 }
+                
+                Button(action: {}) {
+                    Navigator.navigate(.secondview) {
+                        Text("go to second view")
+                    }
+                }
+                
             }
         }
     }
