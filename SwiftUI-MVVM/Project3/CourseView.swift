@@ -7,6 +7,21 @@
 
 import SwiftUI
 
+enum Route {
+    case animal(String)
+}
+
+struct Navigator {
+    
+    static func navigate<T: View>(_ route: Route, content: () -> T) -> AnyView {
+        switch route {
+        case .animal(let animal):
+            return AnyView(NavigationLink(destination: AnimalView(animal: animal)) {
+                content()
+            })
+        }
+    }
+}
 
 
 struct CourseView: View {
@@ -17,8 +32,8 @@ struct CourseView: View {
         NavigationView{
             VStack {
                 List(animals, id:\.self){ animal in
-                    NavigationLink(destination: AnimalView(animal: animal)) {
-                        Text("cloicl to go")
+                    Navigator.navigate(.animal(animal)) {
+                        Text(animal)
                     }
                 }
             }
