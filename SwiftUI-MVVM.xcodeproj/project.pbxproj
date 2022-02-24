@@ -24,6 +24,7 @@
 		3A58931C27C7A68C00DB903F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58931B27C7A68C00DB903F /* ColorExtension.swift */; };
 		3A58932027C7A83200DB903F /* Guess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58931F27C7A83200DB903F /* Guess.swift */; };
 		3A58932327C7A99100DB903F /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932227C7A99100DB903F /* GuessView.swift */; };
+		3A58932527C7B29600DB903F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932427C7B29600DB903F /* Global.swift */; };
 		ED24F619265C242D00DD76F9 /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */; };
 		ED24F620265C242D00DD76F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */; };
 		ED24F628265C245F00DD76F9 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F627265C245F00DD76F9 /* AppetizerListView.swift */; };
@@ -54,6 +55,7 @@
 		3A58931B27C7A68C00DB903F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		3A58931F27C7A83200DB903F /* Guess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess.swift; sourceTree = "<group>"; };
 		3A58932227C7A99100DB903F /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
+		3A58932427C7B29600DB903F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		ED24F615265C242D00DD76F9 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				3A58931F27C7A83200DB903F /* Guess.swift */,
+				3A58932427C7B29600DB903F /* Global.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				ED24F634265C261800DD76F9 /* LoadingView.swift in Sources */,
 				3A58930F27C7915300DB903F /* SecondView.swift in Sources */,
 				3A3FEDA827C6B46600F831DC /* LocationRequestView.swift in Sources */,
+				3A58932527C7B29600DB903F /* Global.swift in Sources */,
 				ED24F636265C26C700DD76F9 /* AppetizerCell.swift in Sources */,
 				3A3FEDA027C644B000F831DC /* Model.swift in Sources */,
 				3A58932327C7A99100DB903F /* GuessView.swift in Sources */,
