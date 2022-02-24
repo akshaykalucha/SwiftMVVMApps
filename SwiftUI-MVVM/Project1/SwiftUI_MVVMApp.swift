@@ -4,7 +4,7 @@ import SwiftUI
 struct SwiftUI_MVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            WeatherView()
+            WordleView()
         }
     }
 }
