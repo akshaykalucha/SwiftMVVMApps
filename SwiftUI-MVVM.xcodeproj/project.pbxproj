@@ -29,6 +29,9 @@
 		3A58932927C7EE4E00DB903F /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932827C7EE4E00DB903F /* LetterButtonView.swift */; };
 		3A58932B27C94D2200DB903F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932A27C94D2200DB903F /* Animations.swift */; };
 		3A9EEB0F27CB4B6B004EA830 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB0E27CB4B6B004EA830 /* FlipView.swift */; };
+		3A9EEB1127CB8FE6004EA830 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1027CB8FE6004EA830 /* ToastView.swift */; };
+		3A9EEB1327CB9438004EA830 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1227CB9438004EA830 /* Statistic.swift */; };
+		3A9EEB1527CB95FE004EA830 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1427CB95FE004EA830 /* StatsView.swift */; };
 		ED24F619265C242D00DD76F9 /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */; };
 		ED24F620265C242D00DD76F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */; };
 		ED24F628265C245F00DD76F9 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F627265C245F00DD76F9 /* AppetizerListView.swift */; };
@@ -64,6 +67,9 @@
 		3A58932827C7EE4E00DB903F /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		3A58932A27C94D2200DB903F /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		3A9EEB0E27CB4B6B004EA830 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		3A9EEB1027CB8FE6004EA830 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		3A9EEB1227CB9438004EA830 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		3A9EEB1427CB95FE004EA830 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		ED24F615265C242D00DD76F9 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 			children = (
 				3A58931F27C7A83200DB903F /* Guess.swift */,
 				3A58932427C7B29600DB903F /* Global.swift */,
+				3A9EEB1227CB9438004EA830 /* Statistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 				3A58932827C7EE4E00DB903F /* LetterButtonView.swift */,
 				3A58932A27C94D2200DB903F /* Animations.swift */,
 				3A9EEB0E27CB4B6B004EA830 /* FlipView.swift */,
+				3A9EEB1027CB8FE6004EA830 /* ToastView.swift */,
+				3A9EEB1427CB95FE004EA830 /* StatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,7 +355,9 @@
 				ED24F62E265C24DF00DD76F9 /* APError.swift in Sources */,
 				3A58930B27C75EDE00DB903F /* CourseModel.swift in Sources */,
 				3A3FEDA227C644CB00F831DC /* WeatherViewModel.swift in Sources */,
+				3A9EEB1327CB9438004EA830 /* Statistic.swift in Sources */,
 				3A58930727C75EC300DB903F /* CourseView.swift in Sources */,
+				3A9EEB1127CB8FE6004EA830 /* ToastView.swift in Sources */,
 				ED24F630265C257900DD76F9 /* AlertItem.swift in Sources */,
 				ED24F62C265C24B500DD76F9 /* NetworkManager.swift in Sources */,
 				3A58932B27C94D2200DB903F /* Animations.swift in Sources */,
@@ -361,6 +372,7 @@
 				ED24F62A265C248500DD76F9 /* Appetizer.swift in Sources */,
 				ED24F619265C242D00DD76F9 /* SwiftUI_MVVMApp.swift in Sources */,
 				3A58931627C79E6100DB903F /* WordleView.swift in Sources */,
+				3A9EEB1527CB95FE004EA830 /* StatsView.swift in Sources */,
 				3A58932927C7EE4E00DB903F /* LetterButtonView.swift in Sources */,
 				ED24F634265C261800DD76F9 /* LoadingView.swift in Sources */,
 				3A58930F27C7915300DB903F /* SecondView.swift in Sources */,
@@ -429,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -484,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -504,7 +516,7 @@
 				DEVELOPMENT_TEAM = FN4Y62X46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-MVVM/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,7 +538,7 @@
 				DEVELOPMENT_TEAM = FN4Y62X46R;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SwiftUI-MVVM/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
