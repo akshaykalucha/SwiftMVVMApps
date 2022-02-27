@@ -33,6 +33,9 @@ class WordleDataModel: ObservableObject {
         selectedWord = Global.commonWords.randomElement() ?? ""
         currentWord = ""
         inPlay = true
+        tryIndex = 0
+        gameOver = false
+        print(selectedWord)
     }
     
     func populateDefaults() {
@@ -62,7 +65,8 @@ class WordleDataModel: ObservableObject {
             if verifyWord() {
                 print("valid")
                 setCurrentGuessColor()
-                tryIndex += 1
+                tryIndex += 1 
+                currentWord = ""
                 if tryIndex == 6 {
                     gameOver = true
                     inPlay = false
@@ -109,13 +113,21 @@ class WordleDataModel: ObservableObject {
         for index in 0...4 {
             let guessLetter = guesses[tryIndex].guessLetters[index]
             if correctLetters.contains(guessLetter) && guesses[tryIndex].bgColors[index] != .correct
-            && frequency[guessLetter]! > 0{
+                && frequency[guessLetter]! > 0{
                 guesses[tryIndex].bgColors[index] = .misplaced
                 frequency[guessLetter]! -= 1
             }
         }
+        flipCards(for: tryIndex)
         
-        print(selectedWord)
-        print(guesses[tryIndex].word)
+        
     }
+    func flipCards(for row: Int) {
+        for col in 0...4 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(col) * 0.2) {
+                self.guesses[row].cardFlipped[col].toggle()
+            }
+        }
+    }
+    
 }
