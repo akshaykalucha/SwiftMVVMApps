@@ -27,6 +27,7 @@
 		3A58932527C7B29600DB903F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932427C7B29600DB903F /* Global.swift */; };
 		3A58932727C7EC8E00DB903F /* KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932627C7EC8E00DB903F /* KeyBoard.swift */; };
 		3A58932927C7EE4E00DB903F /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932827C7EE4E00DB903F /* LetterButtonView.swift */; };
+		3A58932B27C94D2200DB903F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58932A27C94D2200DB903F /* Animations.swift */; };
 		ED24F619265C242D00DD76F9 /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */; };
 		ED24F620265C242D00DD76F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */; };
 		ED24F628265C245F00DD76F9 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F627265C245F00DD76F9 /* AppetizerListView.swift */; };
@@ -60,6 +61,7 @@
 		3A58932427C7B29600DB903F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		3A58932627C7EC8E00DB903F /* KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoard.swift; sourceTree = "<group>"; };
 		3A58932827C7EE4E00DB903F /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
+		3A58932A27C94D2200DB903F /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		ED24F615265C242D00DD76F9 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				3A58932227C7A99100DB903F /* GuessView.swift */,
 				3A58932627C7EC8E00DB903F /* KeyBoard.swift */,
 				3A58932827C7EE4E00DB903F /* LetterButtonView.swift */,
+				3A58932A27C94D2200DB903F /* Animations.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				3A58930727C75EC300DB903F /* CourseView.swift in Sources */,
 				ED24F630265C257900DD76F9 /* AlertItem.swift in Sources */,
 				ED24F62C265C24B500DD76F9 /* NetworkManager.swift in Sources */,
+				3A58932B27C94D2200DB903F /* Animations.swift in Sources */,
 				3A58932027C7A83200DB903F /* Guess.swift in Sources */,
 				3A58930D27C78D9000DB903F /* AnimalView.swift in Sources */,
 				3A58931927C7A2B600DB903F /* WordleDataModel.swift in Sources */,
