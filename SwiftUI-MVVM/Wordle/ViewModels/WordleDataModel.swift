@@ -177,4 +177,28 @@ class WordleDataModel: ObservableObject {
         }
     }
     
+    func shareResult() {
+        let stat = Statistic.loadStat()
+        let resultString = """
+Wordle \(stat.games) \(tryIndex < 6 ? "\(tryIndex + 1)/6" : "")
+\(guesses.compactMap{$0.reesults}.joined(separator: "\n"))
+"""
+        let activityControler = UIActivityViewController(activityItems: [resultString], applicationActivities: nil)
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            UIWindow.key?.rootViewController!
+                .present(activityControler, animated: true)
+        case .pad:
+            activityControler.popoverPresentationController?.sourceView = UIWindow.key
+            activityControler.popoverPresentationController?.sourceRect = CGRect(x: Global.screenWidth / 2,
+                                                                                 y: Global.screenHeight / 2,
+                                                                                 width: 200,
+                                                                                 height: 200)
+            UIWindow.key?.rootViewController!.present(activityControler, animated: true)
+            
+        default:
+            break
+        }
+    }
+    
 }

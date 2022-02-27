@@ -32,6 +32,7 @@
 		3A9EEB1127CB8FE6004EA830 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1027CB8FE6004EA830 /* ToastView.swift */; };
 		3A9EEB1327CB9438004EA830 /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1227CB9438004EA830 /* Statistic.swift */; };
 		3A9EEB1527CB95FE004EA830 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1427CB95FE004EA830 /* StatsView.swift */; };
+		3A9EEB1727CBA5BD004EA830 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9EEB1627CBA5BC004EA830 /* UIWindow.swift */; };
 		ED24F619265C242D00DD76F9 /* SwiftUI_MVVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */; };
 		ED24F620265C242D00DD76F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */; };
 		ED24F628265C245F00DD76F9 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24F627265C245F00DD76F9 /* AppetizerListView.swift */; };
@@ -70,6 +71,7 @@
 		3A9EEB1027CB8FE6004EA830 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		3A9EEB1227CB9438004EA830 /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		3A9EEB1427CB95FE004EA830 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		3A9EEB1627CBA5BC004EA830 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		ED24F615265C242D00DD76F9 /* SwiftUI-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED24F618265C242D00DD76F9 /* SwiftUI_MVVMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_MVVMApp.swift; sourceTree = "<group>"; };
 		ED24F61F265C242D00DD76F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				3A9EEB0E27CB4B6B004EA830 /* FlipView.swift */,
 				3A9EEB1027CB8FE6004EA830 /* ToastView.swift */,
 				3A9EEB1427CB95FE004EA830 /* StatsView.swift */,
+				3A9EEB1627CBA5BC004EA830 /* UIWindow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				3A3FED9827C6291C00F831DC /* AppetizerListViewModel.swift in Sources */,
 				3A58931C27C7A68C00DB903F /* ColorExtension.swift in Sources */,
 				3A3FEDA427C644D600F831DC /* WeatherView.swift in Sources */,
+				3A9EEB1727CBA5BD004EA830 /* UIWindow.swift in Sources */,
 				3A9EEB0F27CB4B6B004EA830 /* FlipView.swift in Sources */,
 				3A58932727C7EC8E00DB903F /* KeyBoard.swift in Sources */,
 				ED24F62A265C248500DD76F9 /* Appetizer.swift in Sources */,

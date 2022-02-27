@@ -15,4 +15,11 @@ struct Guess {
     var guessLetters: [String] {
         word.map { String($0) }
     }
+    
+    // 🟨⬛🟩⬛🟨
+    
+    var reesults: String {
+        let tryColor: [Color: String] = [.misplaced: "🟨", .wrong: "⬛", .correct: "🟩"]
+        return bgColors.compactMap {tryColor[$0]}.joined(separator: "")
+    }
 }
